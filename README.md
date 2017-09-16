@@ -4,6 +4,6 @@ Testing the performance of bitsets in Swift.
 
 
 ```
-swift build   --configuration release
+swift build -Xcc -march=native  --configuration release
 .build/release/SwiftBitsetBenchmark
 ```
