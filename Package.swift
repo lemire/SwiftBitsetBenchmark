@@ -1,9 +1,15 @@
+// swift-tools-version:4.0
 import PackageDescription
 
 let package = Package(
     name: "SwiftBitsetBenchmark",
     dependencies: [
-   .Package(url: "https://github.com/lemire/SwiftBitset.git", majorVersion: 0),
-   .Package(url: "https://github.com/lemire/Swimsuit.git", majorVersion: 0)
+   .package(url: "https://github.com/lemire/SwiftBitset.git", from: "0.3.2"),
+   .package(url: "https://github.com/lemire/Swimsuit.git", from: "0.1.2")
+    ],
+    targets: [
+        .target(
+            name: "SwiftBitsetBenchmark",
+            dependencies: ["Bitset", "Swimsuit"]),
     ]
 )
