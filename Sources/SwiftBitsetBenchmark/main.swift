@@ -9,7 +9,7 @@ import Foundation
           b.add(i)
       }
     }
-    print("testAddPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testAddPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIndexSetAddPerformance() {
@@ -19,7 +19,7 @@ import Foundation
           b.insert(i)
       }
     }
-    print("testIndexSetAddPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIndexSetAddPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testCountPerformance() {
@@ -30,7 +30,7 @@ import Foundation
     let nano = Swimsuit.nanotime {
       _ = b1.count()
     }
-    print("testCountPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testCountPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIndexSetCountPerformance() {
@@ -41,7 +41,7 @@ import Foundation
     let nano = Swimsuit.nanotime {
       _ = b1.count
     }
-    print("testIndexSetCountPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIndexSetCountPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIteratorPerformance() {
@@ -55,7 +55,7 @@ import Foundation
         sum += 1
       }
     }
-    print("testIteratorPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIteratorPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIndexSetIteratorPerformance() {
@@ -69,7 +69,7 @@ import Foundation
         sum += 1
       }
     }
-    print("testIndexSetIteratorPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIndexSetIteratorPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIntersectionPerformance() {
@@ -85,7 +85,7 @@ import Foundation
     let nano = Swimsuit.nanotime {
       sum += (b1 & b2).count()
     }
-    print("testIntersectionPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIntersectionPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
   func testIndexSetIntersectionPerformance() {
@@ -101,7 +101,7 @@ import Foundation
     let nano = Swimsuit.nanotime {
       sum += (b1.intersection(b2)).count
     }
-    print("testIndexSetIntersectionPerformance ", Double(nano) / 1_000_000.0, " ms")
+    print("testIndexSetIntersectionPerformance ", Double(nano) / 1_000_000.0, " ns")
   }
 
 testAddPerformance()
